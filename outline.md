@@ -10,14 +10,17 @@
 * Problem to Solve
 ## III. Linked List Tutorial
 * Introduction
-* For Loops (Iterators)
-* Using Range with For Loops
-* While Loops
+* Inserting from Linked List
+* Removing from Linked List
+* Accessing from a Linked List
+* Linked List in Python
 * Example
 * Problem to Solve
 ## IV. Tree Tutorial
 * Introduction
-* Structure of a Python Function
-* Organizing Functions
+* Building a BST
+* Inserting into a BST
+* Traversing a BST
+* BST in Python
 * Example
 * Problem to Solve
