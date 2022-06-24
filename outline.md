@@ -1,4 +1,4 @@
-# Python Fundamentals Tutorial
+# Python Data Strcture Tutorial
 ## I. Welcome
 * Introduction
 * Contact Information
