@@ -125,7 +125,13 @@ True
 ### Create Your Stack Using Class
 
 Create your own stack object and test it out!
-
+You should create these methods for it:
+* pop
+* push
+* size
+* empty
+* top
+(Try not to look at the tutorial above while doing this problem. Make sure you understand how stack work before doing it.)
 Example solution: [Solution](simple_stack.py)
 ### Challange Next Greater Element
 
