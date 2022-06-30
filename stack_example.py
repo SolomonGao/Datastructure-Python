@@ -1,5 +1,5 @@
 # prints element and NGE pair for all
-# elements of arr[] of size n
+# elements of array[] of size length(array)
 def printNGE(array):
     size = len(array)
     stack = []
@@ -15,8 +15,8 @@ def printNGE(array):
         # a) print the pair
         # b) keep popping while elements are
         # smaller and stack is not empty
-        if (len(stack) != 0):
-            while (len(stack) != 0 and stack[-1] <= array[i]):
+        if len(stack) != 0:
+            while len(stack) != 0 and stack[-1] <= array[i]:
                 stack.pop()
         if len(stack) == 0:
             res[i] = -1 

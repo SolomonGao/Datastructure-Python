@@ -1,7 +1,5 @@
 # Create your stack!
 
-from pyrsistent import s
-
 
 class Stack():
 
