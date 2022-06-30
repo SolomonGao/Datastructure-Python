@@ -122,7 +122,12 @@ Is this stack empty?
 True
 ```
 ## Problem to Solve
-### Next Greater Element
+### Create Your Stack Using Class
+
+Create your own stack object and test it out!
+
+Example solution: [Solution](simple_stack.py)
+### Challange Next Greater Element
 
 Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in the array. Elements for which no greater element exist, consider the next greater element as -1. 
 
