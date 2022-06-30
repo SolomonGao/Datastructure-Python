@@ -24,7 +24,7 @@ def printNGE(array):
             res[i] = stack[-1]
         stack.append(array[i])
     
-    print("Element | NGE")
+    print("Element | Next Great Element")
     for i in range(len(array)):
         print(str(array[i]) + " | " + str(res[i]))
      
