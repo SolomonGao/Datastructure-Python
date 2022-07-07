@@ -21,32 +21,46 @@ The functions associated with stack are:
 * push(a) – Inserts the element ‘a’ at the top of the stack – Time Complexity: O(1)
 * pop() – Deletes the topmost element of the stack – Time Complexity: O(1)
 
-## Example
-### Create Your Stack Using Class
+## Implementation
+Stack is very easy in python. It can be created by simplily using array.
 
-Create your own stack object and test it out!
-You should create these methods for it:
 * pop
+```python
+stack = [1,2,3,4,5] # create a stack
+stack.pop() # pop out 5 from the stack
+# [1,2,3,4]
+```
 * push
+```python
+stack.append(6) # push 6 to the stack
+[1,2,3,4,6]
+```
 * size
+```python
+size = len(stack) # 5
+```
 * empty
+```python
+if stack: # if stack is not empty
+   doSomething()
+```
 * top
-
+```python
+stack[-1] # 6
+```
+Or if you want to create a class for stack, try yourself first and there is an sample you can check it out.
 Example solution: [stack](simple_stack.py)
 
 Then use this stack to slove these problem below!
-### Problem to Solve
+## Example
+Stack is good at tracking history. Like it's name, 
+if you want to process some data like stacking blocks, you can use stack.
 1. Now we have a badminton tube with 8 shuttlecocks numbered 1 to 8 in it. Now we want to put these shuttlecocks upside down and put them in the barrel. Try using stack for this task.
 
 Template: [reverse](reverse.py)
 Solution: [reverse solution](reverse_solution.py)
 
-2. We now have some shuttlecocks inside a shuttlecock. Each of them has a number. We now want to take out all the shuttles that are not numbered in sequence. For example, the number in the cylinder is [4, 3, 5, 6, 2, 8, 7]. Then we need to take out the 2nd, 5th, and 7th shuttlecocks.
-
-Template: [pair](pair.py)
-Solution: [pair solution](pair_solution.py)
-
-### Challange Next Greater Element
+## Problem to solve
 
 Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in the array. Elements for which no greater element exist, consider the next greater element as -1. 
 
@@ -62,6 +76,6 @@ Element |  NGE
    25   | -1
 
 Template: [next greater element](NGE.py)
-#### Solution
+### Solution
 Please try yourself first before seeing the solution.
 [Sample solution](stack_example.py)

@@ -128,7 +128,7 @@ class Linked_list():
         return self.size
 
     # *********************
-    # problem one
+    # example
     # *********************
     def __reversed__(self):
         curr = self.tail
@@ -137,43 +137,32 @@ class Linked_list():
             curr = curr.prev
 
     # *********************
-    # problem two
+    # problem
     # *********************
-    def insert_advance(self, data, new_data, order):
-        # Insert new data after the first data
-        # order tells you which number the user has chosen
-        new_node = Linked_list.Node(new_data)
-        orginal = order
+    def cut(self, data):
+        # cut this linked list from the first data and reverse two parts
         curr = self.head
         while curr:
-            # If find the location of that data
             if curr.data == data:
-                # When orginal = 1, which means find the number
-                # of element in the linked list
-                if orginal == 1:
-                    if curr == self.tail:
-                        new_node.prev = self.tail
-                        self.tail.next = new_node
-                        self.tail = new_node
-                    else:
-                # Do four step
-                # set new node's prev to curr
-                # set new node's next to curr's next
-                # set curr's next's prev to new node
-                # set curr's next to new node
-                        new_node.prev = curr
-                        new_node.next = curr.next
-                        curr.next.prev = new_node
-                        curr.next = new_node
-                        self.size += 1
-                    return
-                orginal -= 1
-            # Look through the linked list
+                # if the data is the tail, do nothing
+                if curr == self.tail:
+                    pass
+                else:
+                    # connect head and tail by seting head.prev
+                    # to self.tail and tail.next to self.head
+                    # set head to curr.next
+                    # set tail to curr
+                    # set head.prev to None
+                    # set tail.next to None
+                    self.head.prev = self.tail
+                    self.tail.next = self.head
+                    self.head = curr.next
+                    self.head.prev = None
+                    self.tail = curr
+                    self.tail.next = None
+                return
             curr = curr.next
-        if orginal == order:
-            print("Did not find {} in the linked list.".format(data))
-        else:
-            print("This linked list only contains {} numbers of {}.".format(order - orginal, data))
+        print("{} is not in the linked list.".format(data))
 
 
 linked_list = Linked_list()
@@ -181,14 +170,15 @@ linked_list = Linked_list()
 linked_list.insert_head(10)
 linked_list.insert_head(6)
 linked_list.insert_tail(5)
-linked_list.insert_tail(10)
+linked_list.insert_tail(14)
 print(linked_list)
 linked_list.insert_from(10, 3)
 linked_list.insert_from(10, 12)
 linked_list.insert_from(10, 18)
-linked_list.insert_advance(10, 13, 2)
-linked_list.insert_advance(13, 14, 2)
-linked_list.insert_advance(14, 14, 1)
 print(linked_list)
-
+# Example
 print(list(reversed(linked_list)))
+# Problem
+linked_list.cut(18)
+linked_list.cut(36)
+print(linked_list)

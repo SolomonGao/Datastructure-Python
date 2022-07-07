@@ -128,40 +128,24 @@ class Linked_list():
         return self.size
 
     # *********************
-    # problem one
+    # example
     # *********************
     def __reverse__(self):
         pass
 
     # *********************
-    # problem two
+    # problem
     # *********************
-    def insert_advance(self, data, new_data, order):
-        # Insert new data after the first data
-        # order tells you which number the user has chosen
-        new_node = Linked_list.Node(new_data)
-        orginal = order
-        curr = self.head
-        while curr:
-            # If find the location of that data
-            if curr.data == data:
-                if orginal == 1:
-                # if orginal = 1, which means find the number
-                # of element in the linked list
-                    pass
-                # Do four step
-                # set new node's prev to curr
-                # set new node's next to curr's next
-                # set curr's next's prev to new node
-                # set curr's next to new node
-                # if the orginal is not 1, which means we did find 
-                # the same elment but it is not the one we want, so we
-                # go to next
-                orginal -= 1
-            # Look through the linked list
-            curr = curr.next
-
-
+    def cut(self, data):
+        # cut this linked list from the first data and reverse two parts
+                # if the data is the tail, do nothing
+                    # connect head and tail by seting head.prev
+                    # to self.tail and tail.next to self.head
+                    # set head to curr.next
+                    # set tail to curr
+                    # set head.prev to None
+                    # set tail.next to None
+        pass
 
 
     # test case
@@ -175,9 +159,10 @@ print(linked_list)
 linked_list.insert_from(10, 3)
 linked_list.insert_from(10, 12)
 linked_list.insert_from(10, 18)
-linked_list.insert_advance(10, 13, 2)
-linked_list.insert_advance(13, 14, 2)
-linked_list.insert_advance(14, 14, 1)
 print(linked_list)
-
+# example
 print(list(reversed(linked_list)))
+# Problem
+linked_list.cut(18)
+linked_list.cut(36)
+print(linked_list)

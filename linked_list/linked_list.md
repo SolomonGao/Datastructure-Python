@@ -93,12 +93,16 @@ The size is maintained within the linked list class. Every time you insert a nod
  
  Sample: [sample](linked_list_sample.py)
 
- ### Problem
+ ### Example
+ Linked list is used to store dynamic data, and you can use linked list when you need to insert or modify elements to the header and tailer multiple times.
  #### Reverse
  Implement the reverse method to allow a linked list to iterate backward through the linked list.
 
- #### Insert Advance
- Now you have a linked list that contains multiple same elements. Implement the insert from method to allow user to choose which one to insert, the first or the second. If the user choose the second but the linked list only contains one, give user an error message.
+Template: [reverse](problem.py)
+Solution: [reverse solution](problem_solution.pypy)
+ ### Problem
+#### Cut Pack
+You have a set of data from which you want to choose a position to cut it, then put the second part of the cut position in the front and the former part in the back. (curr becomes head. tail becomes curr. head becomes curr.next. curr.prev becomes tail.)
 
 Template: [problem](problem.py)
 Solution: [problem solution](problem_solution.py)
