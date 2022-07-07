@@ -22,106 +22,6 @@ The functions associated with stack are:
 * pop() – Deletes the topmost element of the stack – Time Complexity: O(1)
 
 ## Example
-To demostrate how stack works, we first create a stack
-```python
-class Stack():
-
-    def __init__(self):
-        self.stack = []
-
-    def __str__(self):
-        return str(self.stack)
-```
-This method below returns whether the stack is empty.
-#### Empty
-```python
-    def empty(self):
-        if len(self.stack) == 0:
-            return True
-        else:
-            return False
-```
-This method returns the size of the stack.
-#### Size
-```python
-    def size(self):
-        return len(self.stack)
-```
-Then we write the push method to let user add element into the stack.
-#### Push
-```python
-    def push(self, datum):
-        self.stack.append(datum)
-```
-#### Pop
-Next we write the pop method to allow user to remove element from the stack. Notice that we should write a if statment to determine if the stack is empty.
-```python
-    def pop(self):
-        if stack.size() > 0:
-            self.stack.pop()
-        else:
-            return "Empty stack"
-```
-#### Peek/Top
-This method returns a reference to the topmost element of the stack.
-```python
-    def peek(self):
-        if stack.size() > 0:
-            return self.stack[-1]
-        else:
-            return "Empty stack"
-```
-#### Test
-```python
-stack = Stack()
-stack.push(1)
-stack.push(2)
-
-print("Initial stack:")
-print(stack)
-
-stack.push(3)
-
-print("New stack:")
-print(stack)
-
-print("The topmost element is:")
-print(stack.peek()) # 3
-
-print("The size of this stack is:")
-print(stack.size()) # 3
-
-print("Elements popped from stack:")
-print(stack.pop()) # 3
-print(stack.pop()) # 2
-print(stack.pop()) # 1
-print("Try to pop from an empty stack:")
-print(stack.pop()) # Empty stack
-
-print("Is this stack empty?")
-print(stack.empty()) # True
-```
-
-#### Output
-```python
-Initial stack:
-[1, 2]
-New stack:
-[1, 2, 3]
-The topmost element is:
-3
-The size of this stack is:
-3
-Elements popped from stack:
-3
-2
-1
-Try to pop from an empty stack:
-Empty stack
-Is this stack empty?
-True
-```
-## Problem to Solve
 ### Create Your Stack Using Class
 
 Create your own stack object and test it out!
@@ -131,13 +31,24 @@ You should create these methods for it:
 * size
 * empty
 * top
-(Try not to look at the tutorial above while doing this problem. Make sure you understand how stack work before doing it.)
+
 Example solution: [Solution](simple_stack.py)
+
+Then use this stack to slove these problem below!
+### Problem to Solve
+1. Now we have a badminton tube with 8 shuttlecocks numbered 1 to 8 in it. Now we want to put these shuttlecocks upside down and put them in the barrel. Try using stack for this task.
+
+Template [Template](reverse.py)
+Solution [Solution](reverse_solution.py)
+
+2. We now have some shuttlecocks inside a shuttlecock. Each of them has a number. We now want to take out all the shuttles that are not numbered in sequence. For example, the number in the cylinder is [4, 3, 5, 6, 2, 8, 7]. Then we need to take out the 2nd, 5th, and 7th shuttlecocks.
+
+Template [Template](pair.py)
+Solution [Solution](pair_solution.py)
+
 ### Challange Next Greater Element
 
 Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in the array. Elements for which no greater element exist, consider the next greater element as -1. 
-
-#### Example
 
 1. For an array, the rightmost element always has the next greater element as -1.
 2. For an array that is sorted in decreasing order, all elements have the next greater element as -1.
@@ -150,7 +61,7 @@ Element |  NGE
    2    |  25
    25   | -1
 
-
+Template: [Template](NGE.py)
 #### Solution
 Please try yourself first before seeing the solution.
 [Sample solution](stack_example.py)
