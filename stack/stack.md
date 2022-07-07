@@ -32,19 +32,19 @@ You should create these methods for it:
 * empty
 * top
 
-Example solution: [Solution](simple_stack.py)
+Example solution: [stack](simple_stack.py)
 
 Then use this stack to slove these problem below!
 ### Problem to Solve
 1. Now we have a badminton tube with 8 shuttlecocks numbered 1 to 8 in it. Now we want to put these shuttlecocks upside down and put them in the barrel. Try using stack for this task.
 
-Template [Template](reverse.py)
-Solution [Solution](reverse_solution.py)
+Template: [reverse](reverse.py)
+Solution: [reverse solution](reverse_solution.py)
 
 2. We now have some shuttlecocks inside a shuttlecock. Each of them has a number. We now want to take out all the shuttles that are not numbered in sequence. For example, the number in the cylinder is [4, 3, 5, 6, 2, 8, 7]. Then we need to take out the 2nd, 5th, and 7th shuttlecocks.
 
-Template [Template](pair.py)
-Solution [Solution](pair_solution.py)
+Template: [pair](pair.py)
+Solution: [pair solution](pair_solution.py)
 
 ### Challange Next Greater Element
 
@@ -61,7 +61,7 @@ Element |  NGE
    2    |  25
    25   | -1
 
-Template: [Template](NGE.py)
+Template: [next greater element](NGE.py)
 #### Solution
 Please try yourself first before seeing the solution.
 [Sample solution](stack_example.py)

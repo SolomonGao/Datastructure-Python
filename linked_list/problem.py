@@ -127,26 +127,57 @@ class Linked_list():
     def get_size(self):
         return self.size
 
+    # *********************
+    # problem one
+    # *********************
+    def __reverse__(self):
+        pass
 
-# test case
+    # *********************
+    # problem two
+    # *********************
+    def insert_advance(self, data, new_data, order):
+        # Insert new data after the first data
+        # order tells you which number the user has chosen
+        new_node = Linked_list.Node(new_data)
+        orginal = order
+        curr = self.head
+        while curr:
+            # If find the location of that data
+            if curr.data == data:
+                if orginal == 1:
+                # if orginal = 1, which means find the number
+                # of element in the linked list
+                    pass
+                # Do four step
+                # set new node's prev to curr
+                # set new node's next to curr's next
+                # set curr's next's prev to new node
+                # set curr's next to new node
+                # if the orginal is not 1, which means we did find 
+                # the same elment but it is not the one we want, so we
+                # go to next
+                orginal -= 1
+            # Look through the linked list
+            curr = curr.next
+
+
+
+
+    # test case
 linked_list = Linked_list()
 
 linked_list.insert_head(10)
-linked_list.insert_head(7)
+linked_list.insert_head(6)
 linked_list.insert_tail(5)
-linked_list.insert_tail(9)
+linked_list.insert_tail(10)
 print(linked_list)
 linked_list.insert_from(10, 3)
 linked_list.insert_from(10, 12)
 linked_list.insert_from(10, 18)
-linked_list.insert_from(100, 3)
+linked_list.insert_advance(10, 13, 2)
+linked_list.insert_advance(13, 14, 2)
+linked_list.insert_advance(14, 14, 1)
 print(linked_list)
-linked_list.remove_head()
-linked_list.remove_tail()
-print(linked_list)
-linked_list.remove_from(18)
-linked_list.remove_from(22)
-print(linked_list)
-for x in linked_list:
-    print(x)
-print("The size of this linked list is {}." .format(linked_list.get_size()))
+
+print(list(reversed(linked_list)))
