@@ -71,22 +71,22 @@ class BST():
             yield from self._traverse_backward(node.left)
 
 # Test
-b_s_tree = BST()
-b_s_tree.insert(5)
-b_s_tree.insert(3)
-b_s_tree.insert(7)
-b_s_tree.insert(2)
-b_s_tree.insert(4)
-b_s_tree.insert(6)
-b_s_tree.insert(8)
+# b_s_tree = BST()
+# b_s_tree.insert(5)
+# b_s_tree.insert(3)
+# b_s_tree.insert(7)
+# b_s_tree.insert(2)
+# b_s_tree.insert(4)
+# b_s_tree.insert(6)
+# b_s_tree.insert(8)
 
-print(3 in b_s_tree)
-print(10 in b_s_tree)
+# print(3 in b_s_tree)
+# print(10 in b_s_tree)
 
-for x in b_s_tree:
-    print(x, end=" ")
-print()
+# for x in b_s_tree:
+#     print(x, end=" ")
+# print()
 
-for x in reversed(b_s_tree):
-    print(x, end=" ")
-print()
+# for x in reversed(b_s_tree):
+#     print(x, end=" ")
+# print()

@@ -148,3 +148,6 @@ Template: [postorder and preorder](tree_example.py)
 Solution: [postorder and preorder](BST_post_pre_order.py)
 
 ### Problem
+This problem is done recursively. Converts a BST to an array in ascending order.
+Template: [to list](to_list.py)
+Solution: [solution](to_list_solution.py)
