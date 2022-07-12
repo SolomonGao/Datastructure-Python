@@ -92,12 +92,58 @@ def __contains__(self, data):
 
 ```
 
-#### Traverse forward
+#### Traverse Forward and Backward
+We will use yield in this part. First of all, you can think of yield as "return", which is intuitive. It is first a return, which returns a certain value in the program, after which the program will not run any further. See it as return and then see it as part of a generator (functions with yield are the real iterators).
+yield from replaces for loops. The first thing the yield from x expression does with the x object is to call iter(x), getting the iterator from it. So x can be any iterable object.
 
-#### Traverse backward
 
+```python
+    def __iter__(self):
+        yield from self._traverse_forward(self.root)  # Start at the root
+
+    def _traverse_forward(self, node):
+        # Does a forward traversal (in-order traversal) through the BST.
+        # yield will allow to print in this format 
+        # for x in tree:
+        #   print(x)
+        if node:
+            yield from self._traverse_forward(node.left)
+            yield node.data
+            yield from self._traverse_forward(node.right)
+```
+This is the function of traverse forward. We can see that we first yield from the left of the node, then yield the value of the node, and then yield from the right of the node. That is to say, the program will return the values in this tree from small to large
+
+So what should we do when we want to traverse backward? Some students may have thought of it. If we want to read from big to small, then we first yield from the right, yield the value, and then yield from the left, right?
+
+```python
+  def __reversed__(self):
+        yield from self._traverse_backward(self.root)
+
+    def _traverse_backward(self, node):
+        # Does a backward traversal (reverse in-order traversal) through the BST.
+        # yield will allow to print in this format 
+        # for x in tree:
+        #   print(x)
+        if node:
+            yield from self._traverse_backward(node.right)
+            yield node.data
+            yield from self._traverse_backward(node.left)
+```
+In the above code, both __iter__ and __reversed__ are iterators to classes in python. When we write them into the code, we can iterate over the class in a for loop.
+They allow us to iterate the class in this way.
+```python
+# Forward
+for x in b_s_tree:
+    print(x, end=" ")
+print()
+# Backward
+for x in reversed(b_s_tree):
+    print(x, end=" ")
+print()
+```
 
 ### Example
+Now let's check your mastery with an example. We learned how to traverse forward and backward. Now we want to traverse in the order in which the tree was written and its reverse order, how should we implement it? That is to say, the data is read layer by layer from the root of the tree and read from the leaves up layer by layer.
 Template: [postorder and preorder](tree_example.py)
 Solution: [postorder and preorder](BST_post_pre_order.py)
 
