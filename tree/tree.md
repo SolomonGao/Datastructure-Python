@@ -6,7 +6,7 @@
 A tree, as its name implies, is a tree-like structure. Much like a linked list, it is also linked by pointers to data together. The difference is that one node of the tree can be connected to many different nodes. Here we will mainly learn about binary trees.
 
 ### Binary Tree
-A binary tree is a tree in which each node can link at most two other nodes. We call the top node root. The nodes to the left and right of any parent node form a subtree. The nodes with no children are called leaves. A node that has connected nodes is called a parent node. The node connected to the parent are called child nodes.
+A binary tree is a tree in which each node can link at most two other nodes. We call the top node root. The nodes to the left and right of any parent node form a subtree. The nodes with no children are called leaves. A node that has connected nodes is called a parent node. The node connected to the parent is called the child node.
 ![tree](tree.png)
 
 ### Binary Search Tree
@@ -14,18 +14,24 @@ Binary search trees(BST) are numeric and ordered trees. It follows these rules:
 1. If its left subtree is not empty, then the value of all nodes in the left subtree is less than the value of its root node.
 2. If its right subtree is not empty, then the value of all nodes in the right subtree is greater than the value of its root node.
 
-Using binary search trees, we can quickly sort a bunch of data (as you may have noticed, the process is similar to the binary sorting). Anything bigger than the node is placed on the right, and smaller than it is placed on the left. When we want to read these data, we can quickly find the data we want.
+Using binary search trees, we can quickly sort a bunch of data (as you may have noticed, the process is similar to binary sorting). Anything bigger than the node is placed on the right, and smaller than it is placed on the left. When we want to read these data, we can quickly find the data we want.
 ![binary search tree](binary_search_tree.png)
 
-As shown on the left above, when we want to find out whether 3 is in the structure, we first compare 10 and 3. 3 is smaller than 10, so we go to the left of 10 which is 6. Comparing 6 and 3, 3 is smaller than 6, then we go to the left side of 6, which is 3. We found 3. It only take 3 steps to find 3 in 7 elements.
+As shown on the left above, when we want to find out whether 3 is in the structure, we first compare 10 and 3. 3 is smaller than 10, so we go to the left of 10 which is 6. Comparing 6 and 3, 3 is smaller than 6, then we go to the left side of 6, which is 3. We found 3. It only takes 3 steps to find 3 in 7 elements.
 
 ### Balanced Binary Search Tree
 A balanced search binary tree is a search binary tree in which the height difference between any two subtrees does not differ significantly. This is also our most widely used tree. Imagine if the root of a tree is the smallest value, and the rest of the values are sorted by size, then the tree will become no different from the linked list. This also loses the significance of the tree.
 
 In the right picture above, it is not a balanced search binary tree.
 
+## Implementation
+### Recursion
+Before we learn how to implement the tree structure, we need to understand what recursion is. Recursion is simply a function in which a function calls itself. When a big problem is composed of an infinite number of identical small problems, we can use recursion to solve this problem. When we know how to solve a step of the problem, then we keep repeating this step by calling that step itself until the task is complete.
+There are normally three steps to write a recursive function:
+1. Determining recursive function parameters and return values. 
+2. Determine the termination conditions. 
+3. Determining the logic of a single level of recursion.
 ### BST in Python
-
 Most of the operations of BST need to use recursion, they are more complicated and it takes some time to understand them, but once you understand them, you will find them really convenient.
 
 We will discuss these operations and try to write them by yourself:
@@ -93,7 +99,7 @@ def __contains__(self, data):
 ```
 
 #### Traverse Forward and Backward
-We will use yield in this part. First of all, you can think of yield as "return", which is intuitive. It is first a return, which returns a certain value in the program, after which the program will not run any further. See it as return and then see it as part of a generator (functions with yield are the real iterators).
+We will use yield in this part. First of all, you can think of yield as "return", which is intuitive. It is first a return, which returns a certain value in the program, after which the program will not run any further. See it as a return and then see it as part of a generator (functions with yield are the real iterators).
 yield from replaces for loops. The first thing the yield from x expression does with the x object is to call iter(x), getting the iterator from it. So x can be any iterable object.
 
 

@@ -8,7 +8,7 @@ As a data structure, a *stack* is a special linear list that can only be inserte
 
 Since the stack data structure only allows operations at one end, the stack must follow the last-in, first-out principle.
 
-Here we take the badminton tube as an example. At the beginning, the badminton barrel is empty, that is, the empty stack. Then we put the shuttlecocks one by one (that is, push into the stack). When we need badminton, we take it from the badminton barrel (pop). So the first shuttlecock we got was the one we put in at the end.
+Here we take the badminton tube as an example. In the beginning, the badminton barrel is empty, that is, the empty stack. Then we put the shuttlecocks one by one (that is, push them into the stack). When we need badminton, we take it from the badminton barrel (pop). So the first shuttlecock we got was the one we put in at the end.
 
 ![stack_representation](stack_representation.jpg)
 
@@ -22,7 +22,7 @@ The functions associated with stack are:
 * pop() – Deletes the topmost element of the stack – Time Complexity: O(1)
 
 ## Implementation
-Stack is very easy in python. It can be created by simplily using array.
+Stack is very easy in python. It can be created by simply using an array.
 
 * pop
 ```python
@@ -48,21 +48,21 @@ if stack: # if stack is not empty
 ```python
 stack[-1] # 6
 ```
-Or if you want to create a class for stack, try yourself first and there is an sample you can check it out.
+Or if you want to create a class for the stack, try yourself first and there is a sample you can check out.
 Example solution: [stack](simple_stack.py)
 
-Then use this stack to slove these problem below!
+Then use this stack to solve the problems below!
 ## Example
-Stack is good at tracking history. Like it's name, 
-if you want to process some data like stacking blocks, you can use stack.
-1. Now we have a badminton tube with 8 shuttlecocks numbered 1 to 8 in it. Now we want to put these shuttlecocks upside down and put them in the barrel. Try using stack for this task.
+Stack is good at tracking history. Like its name, 
+if you want to process some data like stacking blocks, you can use a stack.
+1. Now we have a badminton tube with 8 shuttlecocks numbered 1 to 8 in it. Now we want to put these shuttlecocks upside down and put them in the barrel. Try using a stack for this task.
 
 Template: [reverse](reverse.py)
 Solution: [reverse solution](reverse_solution.py)
 
 ## Problem to solve
 
-Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in the array. Elements for which no greater element exist, consider the next greater element as -1. 
+Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in the array.The elements for which no greater element exist, consider the next greater element as -1. 
 
 1. For an array, the rightmost element always has the next greater element as -1.
 2. For an array that is sorted in decreasing order, all elements have the next greater element as -1.

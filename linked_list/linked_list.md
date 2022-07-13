@@ -2,9 +2,9 @@
 
 ## Introduction
 
-A linked list is a linear structure connected by pointers. Each node consists of two parts, one is the data field and the other is the pointer field (which stores the pointer to the next node), and the pointer field of the last node points to null (null pointer).
+A linked list is a linear structure connected by pointers. Each node consists of two parts, one is the data field and the other is the pointer field (which stores the pointer to the next node), and the pointer field of the last node points to the null (null pointer).
 
-We only discuss doubly-linked list here since it is usually much more useful than singly-linked lish.
+We only the discuss doubly-linked list here since it is usually much more useful than a singly-linked list.
 
 ![Linked list](linked_list.png)
 
@@ -16,15 +16,15 @@ Arrays are distributed continuously in memory, but linked lists are not distribu
 
 A linked list is linked to each node in the memory through the pointer of the pointer field.
 
-Therefore, the nodes in the linked list are not continuously distributed in the memory, but scattered at an address in the memory. The allocation mechanism depends on the memory management of the operating system.
+Therefore, the nodes in the linked list are not continuously distributed in the memory but scattered at an address in the memory. The allocation mechanism depends on the memory management of the operating system.
 
 ![store method](store.png)
 
 ## Linked list in Python
 
-Linked list is more complicated than stack. Let's learn how to insert element, remove element, and loop through the linked list.
+Let's learn how to insert elements, remove elements, and loop through the linked list.
 ### Insert and Delete
-Linked lish in python is more complicated than stack. Insert and delete an element takes a few steps but they are efficient that both of their efficiency are O(1). But if you want to insert or remove an element in the middle, you have to find where that element is. This process takes O(n) to compete.
+Linked list in python is more complicated than stack. Inserting and deleting an element takes a few steps but they are efficient and both of their efficiency are O(1)s. But if you want to insert or remove an element in the middle, you have to find where that element is. This process takes O(n) to compete.
 For example, if you want to remove the fifth element, you have to find where the next pointer of the forth element and the previous pointer of the sixth element are.
 #### Insert
 ##### Insert Head
@@ -47,9 +47,9 @@ def insert_head(self, data):
             self.head.prev = new_node
             self.head = new_node
 ```
-It takes four steps. First we create a new node. Then, we set new node's next to the head. Next, we set head's prev to the new node. Last, we set head to the new node.
+It takes four steps. First, we create a new node. Then, we set new node's next to the head. Next, we set the head's prev to the new node. Last, we set head to the new node.
 ##### Insert from Middle and Insert Tail
-Here, a picture demostrats how you insert a element in the middle of the linked list.
+Here, a picture demonstrates how you insert an element in the middle of the linked list.
 
 ![insert_from](insert_from.png)
 
@@ -61,11 +61,11 @@ It takes 5 steps:
 5. set the current node' next node to the new node
 
 Insert tail is very similar to insert head.
-Try yourself to implement insert from and insert tail methods!
+Try to implement insert from and insert tail methods!
 
 Template: [insert](linked_list_insert.py)
 #### Remove
-Remove is not as complicated as insert. It only takes two steps to remove a ndoe from a linked list.
+Remove is not as complicated as insert. It only takes two steps to remove a node from a linked list.
 ##### Remove Head
 Remove head takes two steps
 1. set head's next node's prev to None
@@ -81,20 +81,20 @@ def remove_head(self):
 ```
 
 ##### Remove Tail and Remove a Node in the Middle
-Now, using the same strategy, try yourself to write remove tail and remove a ndoe in the middle methods.(Hints are in the template)
+Now, using the same strategy, try to write remove tail and remove a node in the middle methods by yourself. (Hints are in the template)
 
 Template: [remove](linked_list_remove.py)
 
 #### Size
-The size is maintained within the linked list class. Every time you insert a node, you plus one to the size and every time you remove a node, you minus one to the size.
+The size is maintained within the linked list class. Every time you insert a node, you plus one to the size, and every time you remove a node, you minus one to the size.
 
  #### Sample Linked List in Python
- Here we have a sample of linked list. It will have all the methods mentioned above as well as iter and str operators. Please try not to look at it before you finished the practices.
+ Here we have a sample of a linked list. It will have all the methods mentioned above as well as iter and str operators. Please try not to look at it before you finished the practice.
  
  Sample: [sample](linked_list_sample.py)
 
  ### Example
- Linked list is used to store dynamic data, and you can use linked list when you need to insert or modify elements to the header and tailer multiple times.
+ Linked list is used to store dynamic data, and you can use a linked list when you need to insert or modify elements to the head and tail multiple times.
  #### Reverse
  Implement the reverse method to allow a linked list to iterate backward through the linked list.
 
